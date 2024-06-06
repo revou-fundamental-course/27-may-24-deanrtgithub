@@ -3,20 +3,33 @@
 nav {
     display: flex;
     justify-content: space-between;
+    background-color: aliceblue;
 }
 
 nav>section {
     display: flex;
+    align-items: center;
 }
 
 .logo-icon {
     height:50px;
     width:50px;
-    border:1px solid black;
+    border-radius: 50%;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .nav-item {
     border:1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.section-container {
+    background-color: aliceblue;
 }
 
 .banner-container {
@@ -24,20 +37,128 @@ nav>section {
     border:1px solid black;
 }
 
+.banner-img {
+    height:258px;
+    display:flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:none;
+}
+
+.nav-banner {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#previous-button {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start
+}
+
+#next-button {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end
+}
+
 .facility-list {
     display: flex;
     justify-content: space-around;
 }
 
-.form-result {
-    height:100px;
-    border: 1px solid black;
-}
-
 .message-us-section {
     display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:20px;
+}
+
+.form-container {
+    display:flex
+}
+
+#legend-form {
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+#input-form {
+    display: flex;
+    flex-direction:column;
+    padding: 10px;
+    padding-right: 20px;
 }
 
 .result-container {
+    display: flex;
+    justify-content: flex-start;
     width:100%;
+    padding:20px;
+    padding-top: 0;
+    padding-right: 20px;
+}
+
+.form-result {
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    height: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    }
+
+#item-legend {
+    display:flex;
+    padding: 5px;
+}
+    
+#item-form {
+    display:flex;
+    padding: 4px; 
+}
+
+.footer {
+    display:flex;
+    justify-content:flex-end;
+    padding-right: 40px;
+}
+
+
+@media only screen and (max-width: 600px){
+    .navigation {
+        flex-direction:column;
+        align-items:center;
+        padding:20px;
+    }
+
+    .nav-item {
+        display:flex;
+        flex-direction: row;
+
+    }
+
+    .button-item {
+        padding:8px
+    }
+
+    .message-us-section {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .form-container {
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+#result {
+    width:max-content;
+
 }

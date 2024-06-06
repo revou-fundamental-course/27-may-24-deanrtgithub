@@ -5,40 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dean Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <nav>
+    <nav class="navigation">
         <div class="logo-icon"></div>
         
-        <section>
-            <a class="nav-item">Home</a>
-            <a class="nav-item">Our Facilities</a>
-            <a class="nav-item">Message Us</a>
+        <section class="navigation">
+            <div class="button-item">
+                <a class="nav-item" href="#home">Home</a>
+            </div>
+            <div class="button-item">
+                <a class="nav-item" href="#our-facilities">Our Facilities</a>
+            </div>
+            <div class="button-item">
+                <a class="nav-item" href="#message-us">Message Us</a>
+            </div>
         </section>
     </nav>
 
     <hr>
 
-    <section>
+    <section class="section-container">
         <!-- Home -->
-        <section>
+        <section id="home">
             <header>
-                <h1>Hi Dean, welcome to website</h1>
+                <h2>Hi <span id="name"></span>, we're glad you are here!</h2>
             </header>
 
             <article>
                 <p>Lorem Ipsum Dolor Sit Amet...</p>
 
                 <div class="banner-container">
+                    <div class="banner-img" style="background-image:url(assets/1.jpg);"></div>
+                    <div class="banner-img" style="background-image:url(assets/2.jpg);"></div>
+                    <div class="banner-img" style="background-image:url(assets/3.jpg);"></div>
+                    
+                    <div class="nav-banner">
+                        <div id="previous-button">
+                            <button type="button" onclick="nextSlide(1)">Previous</button>
+                        </div>
 
+                        <div id="next-button">
+                            <button type="button" onclick="nextSlide(1)">Next</button>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
+        <br>
+        <br>
 
         <hr>
 
         <!-- Our Facilities -->
-        <section>
+        <section id="our-facilities">
             <header>
                 <h1>Our Facilities</h1>
             </header>
@@ -46,17 +67,17 @@
             <article class="facility-list">
                 <div>
                     <div style="width:50px; height:50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+                    <h5>Pool</h5>
                 </div>
 
                 <div>
                     <div style="width:50px; height:50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+                    <h5>Gym & Fitness</h5>
                 </div>
 
                 <div>
                     <div style="width:50px; height:50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+                    <h5>Meeting Room</h5>
                 </div>
             </article>
         </section>
@@ -64,33 +85,69 @@
         <hr>
 
         <!-- Message Us -->
-        <section>
+        <section id="message-us">
             <header>
                 <h1>Message Us</h1>
             </header>
 
             <section class="message-us-section">
-                <!-- Form -->
-                <section>
-                    <form>
-                        <label>Name</label>
-                        <input />
-                    </form>
+                <!-- Form Container-->
+                <section class="form-container">
+                    <!-- Legend Form -->
+                    <section id="legend-form">
+                        <div id="item-legend">
+                            <label>Name</label>
+                        </div>
+                        <div id="item-legend">
+                            <label>Birthday</label>
+                        </div>
+                        <div id="item-legend">
+                            <label>Gender</label>
+                        </div>
+                        <div id="item-legend">
+                            <label>Message</label>
+                        </div>
+                    </section>
+
+                    <!-- Input Form -->
+                    <section id="input-form">
+                        <div id="item-form">
+                            <input type="text" id="name-input" required />
+                        </div>
+                        <div id="item-form">
+                            <input id="birth-input"/>
+                        </div>
+                        <div id="item-form">  
+                            <input type="radio" name="gender" id="gender-input" value="male" checked>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="gender-input" value="female">
+                            <label for="female">Female</label>
+
+                        </div>
+                        <div id="item-form">
+                            <input type="text" id="message-input"/>  
+                        </div>
+                        <!-- Submit Button -->
+                        <br>
+                        <button type="button" id="submit" onclick="formValidation()">Submit</button>
+                    </section>
                 </section>
-                
-                <!-- Result -->
+                <!-- Result Container -->
                 <section class="result-container">
                     <div class="form-result">
-
+                        <textarea id="result" rows="15" cols="20" readonly></textarea>
                     </div>
                 </section>
             </section>
         </section>
-
-    </section>
-
-    <footer>
-
-    </footer>
+<br>
+<hr>
+                
+        <footer>
+            <div class="footer">
+                <p>2024. All rights reversed</p>
+            </div>
+        </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
